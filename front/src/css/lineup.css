@@ -1,0 +1,19 @@
+#Lineup{
+    padding: 150px;
+}
+
+.lineup_img{
+    border-radius: 50%;
+}
+.lineup_desc{
+    display: flex;
+    align-items: center;
+}
+.lineup_desc:nth-child(even){
+    flex-direction: row-reverse;
+}
+.lineup_taxi_lineup{
+    background: url('../../public/images/background/bg-slider.png') center center / cover no-repeat rgb(4, 37, 62);
+    padding: 120px 0;
+    height: 650px;
+}

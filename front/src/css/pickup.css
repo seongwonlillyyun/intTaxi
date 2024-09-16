@@ -1,0 +1,61 @@
+#Pickup{
+    background-color: white;
+}
+.pickup_content{
+    padding: 150px 0 ;
+}
+.etc_service_desc{
+    font-size: 24px;
+    font-weight: 400;
+    color: rgb(98, 98, 98);
+    margin-top: 20px;
+}
+.desc_important{
+    color: #0d70c5 !important;
+    font-weight: 500;
+}
+.service_etc_box{
+    text-align: center;
+    border-radius: 15px;
+    width: 350px;
+    height: 440px;
+    background: rgb(248, 249, 251);
+}
+.service_box_img{
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+    margin: 50px 0;
+    background: url('../../public/images/background/ic-main-service01.png')  center center / auto 200px no-repeat;
+}
+.service_box_text{
+    display: block;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 35px;
+    color: rgb(0, 0, 0);
+    padding: 0px 20px;
+    text-align: center;
+}
+.service_box2_img{
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+    margin: 50px 0;
+    background: url('../../public/images/background/ic-main-service02.png')  center center / auto 200px no-repeat;
+}
+.service_box3_img{
+    display: inline-block;
+    width: 250px;
+    height: 200px;
+    margin: 50px 0;
+    background: url('../../public/images/background/ic-main-service03.png')  center center / auto 200px no-repeat;
+}
+.service_etc_box_list{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}
+.location{
+    margin-top: 150px;
+}

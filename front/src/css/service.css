@@ -1,0 +1,78 @@
+#Service{
+    background: url('../../public/images/background/bg-premium.png') center center / cover no-repeat;
+}
+.service_content{
+    padding: 150px 0;
+}   
+.service_stitle{
+    font-size: 20px;
+    color: rgb(12, 129, 228);
+    font-weight: 600;
+}
+
+.service_box{
+    display: flex;
+    gap:30px;
+}
+li img{
+    border-radius: 8px;
+}
+.service_desc_list{
+    margin-top: 50px;
+}
+.service_box_textbox{
+    margin-top: 20px;
+    line-height: 30px;
+}
+.service_box_etc{
+    color: #4f4f4f;
+    font-size: 15px;
+}
+.service_box:nth-child(even){
+    flex-direction: row-reverse;
+    margin-top: 20px;
+}
+.howtouse{
+    background-color: rgb(246, 251, 255);
+    padding: 20px 0;
+}
+.howtouse_content{
+    padding: 50px 0;
+}
+.howtouse_title{
+    font-weight: 700;
+    font-size: 50px;
+    color: rgb(10, 53, 86);
+}
+.howtouse_step{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 100px;
+}
+.step_desc{
+    color: rgb(48, 48, 48);
+    font-size: 24px;
+    width: 880px;
+    word-break: keep-all;
+    
+  }
+  .step1_etc{
+    color: #0d70c5 !important;
+    font-size: 24px;
+  }
+.step_important{
+    color: #0d70c5 !important;
+    font-weight: 600;
+}
+.step2_etc{
+    color: #9e9e9e;
+    font-size: 20px;
+}
+.step3_desc{
+    color: rgb(48, 48, 48);
+    font-size: 24px;
+    width: 880px;
+    align-items: center;
+    padding: 20px 0;
+}
