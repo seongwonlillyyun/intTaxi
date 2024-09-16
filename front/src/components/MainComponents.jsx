@@ -104,11 +104,10 @@ export function PublicTitle({content}){
   );
 }
 
-export function ServiceImg(){
+export function Tourtext({text}){
   return(
-      <>
-        <i></i>
-        <p></p>
-      </>
+    <span className='tour_box_bg'>
+       <p className='tour_box_txt'>{text}</p>
+    </span>
   );
 }

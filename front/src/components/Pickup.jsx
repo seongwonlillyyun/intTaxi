@@ -1,5 +1,7 @@
 import '../css/pickup.css'
-import { PublicTitle, ServiceTitle } from './MainComponents';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faLocationDot, faClock, faPhone} from '@fortawesome/free-solid-svg-icons'
+import { PublicTitle } from './MainComponents';
 export default function Pickup(){
   return(
     <>
@@ -36,6 +38,40 @@ export default function Pickup(){
                     <PublicTitle content={'공항 데스크 위치'}/>
                     <p className='etc_service_desc'>인천공항(T1, T2)에 <span className='desc_important'>안내 데스크</span>가 마련되어 있습니다.<br/>
                         현장에서 바로 탑승하기를 원하시는 분들은 각 안내 데스크에 방문해 주세요.</p>
+                    <div>
+                        <ul className='location_box'>
+                            <li>
+                                <div className='airport_box'>
+                                    <div className='airport_box_terminal'>
+                                        <FontAwesomeIcon className='airportbox_icon' icon={faLocationDot} />
+                                        <p>인천국제공항 T1</p>
+                                    </div>
+                                    <div className='airport_box_info'>
+                                        <FontAwesomeIcon className='airportbox_icon' icon={faClock} />
+                                        <p>24시간 운영</p>
+                                        <FontAwesomeIcon className='airportbox_icon' icon={faPhone} />
+                                        <p>1644-2255</p>
+                                    </div>
+                                    <img className='deskimg' src="images/background/img-desk-01.png" alt="" />
+                                </div>
+                            </li>
+                            <li>
+                                <div className='airport_box'>
+                                    <div className='airport_box_terminal'>
+                                        <FontAwesomeIcon className='airportbox_icon' icon={faLocationDot} />
+                                        <p>인천국제공항 T2</p>
+                                    </div>
+                                    <div className='airport_box_info'>
+                                        <FontAwesomeIcon className='airportbox_icon' icon={faClock} />
+                                        <p>09:00~18:00 (탄력적으로 운영)</p>
+                                        <FontAwesomeIcon className='airportbox_icon' icon={faPhone} />
+                                        <p>1644-2255</p>
+                                    </div>
+                                    <img className='deskimg' src="images/background/img-desk-02.png" alt="" />
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

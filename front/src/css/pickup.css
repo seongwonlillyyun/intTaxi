@@ -59,3 +59,43 @@
 .location{
     margin-top: 150px;
 }
+.airport_box{
+    margin-right: 20px;
+    background: rgb(248, 249, 251);
+    border-radius: 20px;
+    height: 481px;
+    padding: 40px;
+}
+.airport_box_terminal{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.airportbox_icon{
+    font-size: 25px;
+}
+.airport_box_terminal p{
+    font-weight: 600;
+}
+.airport_box_info{
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    
+}
+.airport_box_info p{
+    color: #4f4f4f;
+}
+.airport_box_info p:nth-of-type(1){
+    margin-right: 20px;
+}
+.deskimg{
+    height: 300px;
+    margin-top: 30px;
+    margin: 30px auto;
+}
+.location_box{
+    display: flex;
+    margin-top: 50px;
+    justify-content: space-between;
+}

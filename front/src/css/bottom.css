@@ -1,0 +1,12 @@
+#Bottom{
+    background-color: white;
+}
+.bottom_content{
+    padding: 150px 0;
+}
+.bottom_content h2{
+    font-size: 50px;
+    color: rgb(33, 33, 33);
+    font-weight: 700;
+    text-align: center;
+}
