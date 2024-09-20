@@ -1,7 +1,7 @@
-import '../css/about.css'
-import { ReactComponent as Seoul } from "../svg/ic-main-mark01.svg";
-import { ReactComponent as Customer } from "../svg/ic-main-mark02.svg";
-import { ReactComponent as World } from "../svg/ic-main-mark03.svg";
+import '../../css/about.css'
+import { ReactComponent as Seoul } from "../../svg/ic-main-mark01.svg";
+import { ReactComponent as Customer } from "../../svg/ic-main-mark02.svg";
+import { ReactComponent as World } from "../../svg/ic-main-mark03.svg";
 import { Points } from './MainComponents';
 export default function About(){
 

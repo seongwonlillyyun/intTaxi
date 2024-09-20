@@ -1,7 +1,8 @@
 import { ReactComponent as Logo } from "../svg/logo.svg";
 import { ReactComponent as SeoulLogo } from "../svg/seoul-logo.svg";
 import "../css/header.css";
-export default function Header(){
+export default function Header({Changelanguage}){
+    
   return(
     <>
         <div id="header">
@@ -31,13 +32,13 @@ export default function Header(){
                 </ul>
                 <ul className="header_second_menu">
                     <li>
-                        <select className="header_lang">
-                            <option value="">KOR</option>
-                            <option value="">ENG</option>
-                            <option value="">JPN</option>
-                            <option value="">CHN</option>
-                            <option value="">CHN</option>
-                            <option value="">GER</option>
+                        <select className="header_lang" onChange={(e)=>Changelanguage(e)}>
+                            <option value="korean">KOR</option>
+                            <option value="english">ENG</option>
+                            <option value="japaneses">JPN</option>
+                            <option value="chinese">CHN</option>
+                            <option value="chineses">CHN</option>
+                            <option value="german">GER</option>
                         </select>
                     </li>
                     <li>

@@ -1,4 +1,4 @@
-import '../css/pickup.css'
+import '../../css/pickup.css'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLocationDot, faClock, faPhone} from '@fortawesome/free-solid-svg-icons'
 import { PublicTitle } from './MainComponents';

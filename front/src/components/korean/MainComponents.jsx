@@ -1,7 +1,7 @@
-import { ReactComponent as Member } from "../svg/ic-member.svg";
-import { ReactComponent as Bag } from "../svg/ic-bag.svg";
-import { ReactComponent as Together } from "../svg/ic-together.svg";
-import { ReactComponent as Line } from "../svg/ic-line-blue.svg";
+import { ReactComponent as Member } from "../../svg/ic-member.svg";
+import { ReactComponent as Bag } from "../../svg/ic-bag.svg";
+import { ReactComponent as Together } from "../../svg/ic-together.svg";
+import { ReactComponent as Line } from "../../svg/ic-line-blue.svg";
 
 export function Points({number, left}){
   return(

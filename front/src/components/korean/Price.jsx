@@ -1,4 +1,4 @@
-import '../css/price.css'
+import '../../css/price.css'
 import { PublicTitle } from './MainComponents';
 
 export default function Price(){

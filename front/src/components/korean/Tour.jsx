@@ -1,4 +1,4 @@
-import '../css/tour.css'
+import '../../css/tour.css'
 import { Tourtext } from './MainComponents';
 export default function Tour(){
   return(

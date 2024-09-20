@@ -1,4 +1,4 @@
-import '../css/bottom.css'
+import '../../css/bottom.css'
 export default function Bottom(){
   return(
     <>

@@ -1,5 +1,5 @@
-import '../css/service.css'
-import { Howtouse, PublicTitle, ServiceArea, ServiceEtc, ServiceInfo, ServiceTitle } from './MainComponents';
+import '../../css/service.css'
+import { Howtouse, PublicTitle, ServiceArea, ServiceInfo, ServiceTitle } from './MainComponents';
 
 
 export default function Service(){
