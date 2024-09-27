@@ -1,14 +1,17 @@
 import { ReactComponent as Logo } from "../svg/logo.svg";
 import { ReactComponent as SeoulLogo } from "../svg/seoul-logo.svg";
 import "../css/header.css";
+import { Link, useNavigate } from "react-router-dom";
 export default function Header({Changelanguage}){
-    
+
   return(
     <>
         <div id="header">
             <div className="header_content">
                 <h1>
-                    <Logo/>
+                    <Link to={'/'}>
+                        <Logo/>
+                    </Link>
                 </h1>
                 <ul className="header_first_menu">
                     <li>
@@ -45,10 +48,14 @@ export default function Header({Changelanguage}){
                         <SeoulLogo/>
                     </li>
                     <li>
-                        <p>로그인</p>
+                        <Link to={'/login'}>
+                            <p>Login</p>
+                        </Link>
                     </li>
                     <li>
-                        <p>회원가입</p>
+                        <Link to={'/signup'}>
+                            <p>Signup</p>
+                        </Link>
                     </li>
                 </ul>
             </div>

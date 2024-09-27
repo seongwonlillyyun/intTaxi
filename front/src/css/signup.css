@@ -1,0 +1,165 @@
+#Signup1{
+    background-color: #e6e8e6;
+    padding-bottom: 100px;
+}
+.signup_box{
+    background-color: white;
+    padding: 40px 60px;
+    border-radius: 4px;
+}
+.agree_title{
+    font-size: 25px;
+}
+.agree_box{
+    border: 1px solid #adb5bd;
+    width: 800px;
+    padding: 30px;
+    margin: 20px 20px 80px 20px;
+    border-radius: 8px;
+}
+.agree_list_all{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.agree_list_all p{
+    font-weight: 600;
+    font-size: 24px;
+}
+.agree_list{
+    display: flex;
+    position: relative;
+    align-items: center;
+    margin: 15px 0;
+
+}
+
+.agree_list_text{
+    font-size: 20px;
+    margin-left: 30px;
+}
+.list_check{
+    color: red;
+}
+input[type=checkbox] {
+    zoom: 1.2;
+}
+.agree_btn{
+    border: 1px solid  rgb(3, 183, 122);
+    padding: 1px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    color :  rgb(3, 183, 122);
+    position: absolute;
+    right: 0;
+}
+.info_box{
+    padding: 30px;
+}
+.insert_box{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.insert_box p{
+    width: 150px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.insert_box input{
+    height: 35px;
+    width: 300px;
+}
+.insert_box input:nth-of-type(2){
+    width: 220px;
+}
+.id_btn{
+    border: 1px solid rgb(3, 183, 122);
+    color: white;
+    background-color: rgb(3, 183, 122);
+    padding: 5px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.phonenumber_list{
+    display: flex;
+    gap: 10px;
+}
+.phonenumber_list li input {
+    width: 150px;
+}
+.select_gender{
+    display: flex;
+    align-items: center;
+}
+.select_gender input{
+    width: 50px;
+    height: 20px;
+}
+.select_gender p{
+    font-size: 18px;
+}
+.insert_box select {
+    width: 120px;
+    height: 35px;
+}
+.email_list input:nth-of-type(1){
+    width: 180px;
+}
+.address_list{
+    display: flex;
+}
+.address_list p{
+    width: 150px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.address_content{
+    line-height: 40px;
+}
+.zipcode_box{
+    width: 150px;
+    height: 35px;
+}
+.zipcode_btn{
+    border: 1px solid rgb(3, 183, 122);
+    color: white;
+    background-color: rgb(3, 183, 122);
+    padding: 5px 25px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.address_first{
+    height: 35px;
+    width: 300px;
+}
+.detail_address{
+    width: 400px;
+    height: 35px;
+}
+.button_list{
+    margin: 80px 0 20px 0;
+    text-align: center;
+}
+.cancle_btn{
+    border: 1px solid rgb(3, 183, 122);
+    color: rgb(3, 183, 122);
+    padding: 10px 50px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.next_btn{
+    border: 1px solid rgb(3, 183, 122);
+    color: white;
+    background-color: rgb(3, 183, 122);
+    padding: 10px 50px;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+.welldone_img{
+    margin: 0 auto;
+}

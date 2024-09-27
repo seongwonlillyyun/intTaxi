@@ -223,3 +223,14 @@ body {
   font-size: 18px;
   font-weight: 600;
 }
+.login_title{
+  text-align: center;
+  line-height: 50px;
+  padding: 40px 0;
+}
+.login_btitle{
+  font-size: 35px;
+}
+.login_stitle{
+  font-size: 18px;
+}

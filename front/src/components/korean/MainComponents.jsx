@@ -2,6 +2,8 @@ import { ReactComponent as Member } from "../../svg/ic-member.svg";
 import { ReactComponent as Bag } from "../../svg/ic-bag.svg";
 import { ReactComponent as Together } from "../../svg/ic-together.svg";
 import { ReactComponent as Line } from "../../svg/ic-line-blue.svg";
+import {useState} from 'react'
+import { faL } from "@fortawesome/free-solid-svg-icons";
 
 export function Points({number, left}){
   return(
@@ -24,10 +26,18 @@ export function LineupContent(props){
 }
 
 export function TaxiSlides(props){
+  const [btnSettig, setBtnSetting] = useState({1:false, 2:false, 3:false})
+
   TaxiSlides.defaultProps={
     classfirst:'taxi_btn',
     classsecond:'taxi_btn',
     classthird:'taxi_btn'
+  }
+
+  const changeSlide = (e)=>{
+    const {name} = e
+    setBtnSetting({...btnSettig , [name]:true})
+    console.log(btnSettig)
   }
   return(
     <div className="taxi_slide">
@@ -36,9 +46,9 @@ export function TaxiSlides(props){
             <h3 className="swiper_title">인터내셔널 택시 라인업</h3>
         </li>
         <li className="taxi_btn_list">
-           <button className={`${props.classfirst}`}>중형택시</button>
-            <button className={`${props.classsecond}`}>모범택시</button>
-            <button className={`${props.classthird}`}>대형택시</button>
+           <button className={`${props.classfirst}`} name="firstbtn" onClick={(e)=>changeSlide(e.target.name)}>중형택시</button>
+            <button className={`${props.classsecond}`} name="secondbtn" onClick={(e)=>changeSlide(e.target.name)}>모범택시</button>
+            <button className={`${props.classthird}`} name="thirdbtn" onClick={(e)=>changeSlide(e.target.name)}>대형택시</button>
         </li>
         <li>
           <p className="taxi_desc">{props.desc}</p>
