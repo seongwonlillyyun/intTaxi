@@ -2,9 +2,13 @@ import '../../css/signup.css'
 import { MemberTitle } from "./MemberComponents";
 import {useRef, useState} from 'react'
 import { MarketingModal, PinfoModal, TermsModal } from './Modal';
+import DaumPostCode from 'react-daum-postcode'
+import { ValidationAgree, infoCheck, pwcheck } from '../../api/validate';
 
-export default function Signup1({memberInfo, handleCheck, handleChange}){
+export default function Signup1({memberInfo,agree,handleCheck,handleChange, handleAddress, next}){
     const [showModal, setShowModal] = useState(false)
+    const [addbtn, setAddbtn] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
     const refs = {
         nameRef:useRef(null),
         idRef:useRef(null),
@@ -32,11 +36,45 @@ export default function Signup1({memberInfo, handleCheck, handleChange}){
       } else {
         document.body.style.overflow = 'auto';
       }
+      
+    const btnhandler = () =>{
+        setAddbtn(!addbtn)
+    }
+    const themeObj = {
+        bgColor: '#FFFFFF', 
+        pageBgColor: '#FFFFFF', 
+        postcodeTextColor: '#C05850',
+        emphTextColor: '#222222',
+    }
+    const completeHanlder = (data)=> {
+        const {address, zonecode} = data;
+      handleAddress({zipcode:zonecode, address:address})
+    }
+
+    const closeHandler = (state) => {
+        if (state === 'FORCE_CLOSE') {
+          setIsOpen(false);
+        } else if (state === 'COMPLETE_CLOSE') {
+          setIsOpen(false);
+        }
+      };
+      
+    const handleInfo = () =>{
+        if(ValidationAgree(memberInfo)){
+            if(infoCheck(refs)){
+                if(pwcheck(refs)){
+                    console.log(memberInfo)
+                }
+            }
+        }
+    }
+
     
+     
   return(
     <>
         <div id="Signup1">
-            <div className="signup_content wrap">
+            <div className="signup_content wrap"> 
                <MemberTitle
                bigtitle='회원가입' smalltitle='회원가입 후 서비스를 이용해보세요!'/>
                <div className='signup_box'>
@@ -44,12 +82,13 @@ export default function Signup1({memberInfo, handleCheck, handleChange}){
                         <ul className='agree_box'>
                             <li className='agree_list_all'>
                                 <input type="checkbox" name='all'
-                                    onChange={(e)=>handleCheck('all',e.target.checked)} />
+                                    onChange={(e)=>handleCheck('all',e.target.checked)}
+                                    id='all' />
                                 <p>전체 약관 동의</p>
                             </li>
                             <li className='agree_list'>
-                                <input type="checkbox" name="terms" id=""
-                                         onChange={(e)=>handleCheck(e.target.name)}
+                                <input type="checkbox" name="terms" id="termsbox"
+                                         onChange={(e)=>{handleCheck(e.target.name); agree()}}
                                          checked={memberInfo.terms} />
                                 <p className='agree_list_text'><span className='list_check'>[필수]</span> 이용약관</p>
                                 <button className='agree_btn'
@@ -58,8 +97,8 @@ export default function Signup1({memberInfo, handleCheck, handleChange}){
                                 {showModal === true ? <TermsModal closeModal={closeModal}/> : null}
                             </li>
                             <li className='agree_list'>
-                                <input type="checkbox" name="pinfo" id="" 
-                                         onChange={(e)=>handleCheck(e.target.name)}
+                                <input type="checkbox" name="pinfo" id="pinfobox" 
+                                         onChange={(e)=>{handleCheck(e.target.name); agree()}}
                                          checked={memberInfo.pinfo} />
                                 <p className='agree_list_text'><span className='list_check'>[필수]</span> 개인정보 수집 및 이용 동의</p>
                                 <button className='agree_btn'
@@ -69,7 +108,7 @@ export default function Signup1({memberInfo, handleCheck, handleChange}){
                             </li>
                             <li className='agree_list'>
                                 <input type="checkbox" name="marketing" id=""
-                                         onChange={(e)=>handleCheck(e.target.name)}
+                                         onChange={(e)=>{handleCheck(e.target.name); agree()}}
                                          checked={memberInfo.marketing} />
                                 <p className='agree_list_text'><span>[선택]</span> 맞춤 마케팅을 위한 개인정보 수집 이용 동의</p>
                                 <button className='agree_btn'
@@ -178,15 +217,31 @@ export default function Signup1({memberInfo, handleCheck, handleChange}){
                                 <div className='address_box'>
                                     <ul className='address_content'>
                                         <li>
-                                            <input type="text" className='zipcode_box'/>
-                                            <button className='zipcode_btn'>우편번호 찾기</button>
+                                            <input type="text" className='zipcode_box' value={memberInfo.zipcode}
+                                                    name='zipcode'
+                                                    onChange={handleChange} ref={refs.zipcodeRef}/>
+                                            <button className='zipcode_btn' onClick={btnhandler}>우편번호 찾기</button>
+                                            {addbtn && (
+                                                <div>
+                                                    <DaumPostCode className='zipcodemodal'
+                                                        theme={themeObj}
+                                                        onComplete={completeHanlder}
+                                                        onClose={closeHandler}/>
+                                                </div>
+
+                                            )
+                                            }
                                         </li>
                                         <li>
-                                            <input type="text" className='address_first' />
+                                            <input type="text" className='address_first' value={memberInfo.address}
+                                                    name='address'
+                                                    onChange={handleChange} ref={refs.addressRef} />
                                         </li>
                                         <li>
-                                            <input  className='detail_address'
-                                                 type="text" placeholder='상세주소를 입력해주세요' />
+                                            <input  className='detail_address' name='detailaddress'
+                                                 type="text" placeholder='상세주소를 입력해주세요' 
+                                                 onChange={handleChange} ref={refs.detailaddressRef}
+                                                 value={memberInfo.detailaddress}/>
                                         </li>
                                     </ul>
                                 </div>

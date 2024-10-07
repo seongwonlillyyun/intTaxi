@@ -116,6 +116,7 @@ input[type=checkbox] {
     font-weight: 600;
 }
 .address_content{
+    position: relative;
     line-height: 40px;
 }
 .zipcode_box{
@@ -162,4 +163,11 @@ input[type=checkbox] {
 }
 .welldone_img{
     margin: 0 auto;
+}
+
+.zipcodemodal{
+    position: absolute;
+    top: 0px;
+    right: 50px;
+    z-index: 999;
 }
